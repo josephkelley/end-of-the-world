@@ -1,0 +1,78 @@
+<tw-storydata name="Dave Quinn" startnode="1" creator="Twine" creator-version="2.0.11" ifid="7516E89A-9D44-4235-A154-1D572D590FCD" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Opening" tags="" position="512,299">The year is 2021(!?!?) and you are Dave Quinn; a young city councilman in the city of Attleboro, Massachusetts with a wife, dog, and three-year-old daughter. It&#39;s your goal to continue your career and keep your family happy and healthy.
+
+Lately in Attleboro and throughout the United States, food prices have been steadily increasing. For example, Stop and Shop brand whole milk costs $6.29 per gallon, nearly twice as much as it did when you were elected in 2014. But of course the economy is acting up, all members of the UN just came to a landmark agreement to cease all fossil fuels emissions by 2025. Pricey milk is hardly a price to pay for a green future.
+
+That said, there are some individuals, like Attleboro&#39;s own Dale Johnson, who believe that something more troublesome is afoot. Johnson has stormed into multiple city council meetings and published many an op-ed about how GMOs are responsible for rising food prices and how the mythical &quot;One World Order&quot; is lying to the world about crop yields to lull everyone into a false sense of security. From time to time he raises a fair point, but his dissheveled appearance and frantic writing style make him the laughingstock of the city.
+
+In Johnson&#39;s latest and most inflammatory letter to the editor of the Attleboro Sun Chronicle, he demands that the city council abandon plans to erect a new strip mall in favor of an expanded community gardening space. The letter went viral on Facebook and you have no choice but to address it at the next city council meeting. How will you proceed?
+
+- [[Laugh off Johnson&#39;s demands and continue with the existing plans to build a strip mall; the tax money it will generate will help build a new football stadium at Attleboro High School.-&gt;Strip mall]]
+
+- [[Abandon the strip mall plans in favor of a community garden; rival town North Attleboro already has all the shopping anyone could need.-&gt;garden]]
+
+- [[Go forward with the plans to build a strip mall, but form a new Sustainability Committee and name Johnson as your co-chair; after all, you might as well put his passion to good use.-&gt;Committee]]
+
+(set: $fam = 0)
+(set: $cons = 0)
+(set: $prep = 0)</tw-passagedata>
+<tw-passagedata pid="2" name="Strip mall" tags="" position="705,117">constituents happy, family neutral, preparedness down
+
+(set: $cons = $cons + 1)
+(set: $prep = $prep - 1)
+cons: $cons
+prep: $prep
+
+
+[[Next-&gt;Church]]</tw-passagedata>
+<tw-passagedata pid="3" name="Committee" tags="" position="704,303">constituents neutral
+family --
+preparedness ++
+(set: $cons = $cons)
+(set: $prep = $prep - 1)
+(set: $fam = $fam + 1)
+cons: $cons
+fam: $fam
+prep: $prep
+
+[[Next-&gt;Church]]</tw-passagedata>
+<tw-passagedata pid="4" name="garden" tags="" position="705,474">constituents--
+family neutral
+preparedness ++
+(set: $cons = $cons - 1)
+(set: $prep = $prep + 1)
+(set: $fam = $fam)
+cons: $cons
+fam: $fam
+prep: $prep
+
+[[Next-&gt;Church]]</tw-passagedata>
+<tw-passagedata pid="5" name="Church" tags="" position="889,300">Your family wants you to go to church. You wife was raised Catholic and your daugther will be applying to St. John&#39;s Kindergarten next year. Also, it&#39;s a great way to build community and get to know your constituents.
+
+However, so is attending the weekly Sunday farmer&#39;s market. You know Johnson is always there, probably causing a scene about the global wave of starvation that he claims is en route. Maybe you should go and keep him in check.
+
+Will you go to [[mass-&gt;mass]] or to the [[farmer&#39;s market-&gt;market]]?</tw-passagedata>
+<tw-passagedata pid="6" name="mass" tags="" position="1046,176">constituents--
+family++
+preparedness neutral
+
+(set: $cons = $cons - 1)
+(set: $prep = $prep)
+(set: $fam = $fam + 1)
+cons: $cons
+fam: $fam
+prep: $prep
+
+[[Next-&gt;prices]]</tw-passagedata>
+<tw-passagedata pid="7" name="market" tags="" position="1051,387">constituents++
+preparedness++
+family --
+(set: $cons = $cons + 1)
+(set: $prep = $prep)
+(set: $fam = $fam - 1)
+cons: $cons
+fam: $fam
+prep: $prep
+
+[[Next-&gt;prices]]</tw-passagedata>
+<tw-passagedata pid="8" name="prices" tags="" position="1228,272">Double-click this passage to edit it.</tw-passagedata>
+</tw-storydata>
