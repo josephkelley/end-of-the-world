@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Dave Quinn" startnode="1" creator="Twine" creator-version="2.0.11" ifid="7516E89A-9D44-4235-A154-1D572D590FCD" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Opening" tags="" position="512,299">The year is 2050 and you are Dave Quinn; a young city councilman in the city of Attleboro, Massachusetts with a wife, dog, and three-year-old daughter. It&#39;s your goal to continue your career and keep your family happy and healthy.
+<tw-storydata name="Dave Quinn" startnode="1" creator="Twine" creator-version="2.0.11" ifid="7516E89A-9D44-4235-A154-1D572D590FCD" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Opening" tags="" position="475,458">The year is 2050 and you are Dave Quinn; a young and extremely popular city councilman in Attleboro, Massachusetts with a wife, dog, and three-year-old daughter. It&#39;s your goal to continue your career and keep your family happy and healthy.
 
 Lately in Attleboro and throughout the United States, food prices have been steadily increasing. For example, Stop and Shop brand whole milk costs $6.29 per gallon, nearly twice as much as it did when you were first elected in 2046. But of course the economy is acting up, all members of the UN just came to a landmark agreement to cease all fossil fuels emissions by 2060. Pricey milk is hardly a price to pay for a green future.
 
@@ -28,78 +28,141 @@ In Johnson&#39;s latest and most inflammatory letter to the editor of the Attleb
 (set: $fam = 0)
 (set: $cons = 0)
 (set: $prep = 0)</tw-passagedata>
-<tw-passagedata pid="2" name="Strip mall" tags="" position="705,117">constituents happy, family neutral, preparedness down
-
+<tw-passagedata pid="2" name="Strip mall" tags="" position="670,277">Your constituents are happy that there will be space for an Amazon Everystore in Attleboro, and that a new football field will follow shortly thereafter. Unfortunately, this leaves little room for expanded suburban agriculture.
 (set: $cons = $cons + 1)
 (set: $prep = $prep - 1)
-cons: $cons
-prep: $prep
-
 
 [[Next-&gt;Church]]</tw-passagedata>
-<tw-passagedata pid="3" name="Committee" tags="" position="704,303">constituents neutral
-family --
-preparedness ++
-(set: $cons = $cons)
-(set: $prep = $prep - 1)
-(set: $fam = $fam + 1)
-cons: $cons
-fam: $fam
-prep: $prep
+<tw-passagedata pid="3" name="Committee" tags="" position="667,462">Your constituents are happy that there will be space for an Amazon Everystore in Attleboro, and that a new football field will follow shortly thereafter. Unfortunately, this leaves little room for expanded suburban agriculture, but Johnson should be satisfied with his newfound platform.
 
-[[Next-&gt;Church]]</tw-passagedata>
-<tw-passagedata pid="4" name="garden" tags="" position="705,474">constituents--
-family neutral
-preparedness ++
-(set: $cons = $cons - 1)
+(set: $cons = $cons + 1)
 (set: $prep = $prep + 1)
-(set: $fam = $fam)
-cons: $cons
-fam: $fam
-prep: $prep
+(set: $fam = $fam - 1)
 
 [[Next-&gt;Church]]</tw-passagedata>
-<tw-passagedata pid="5" name="Church" tags="" position="889,299">It is summer 2051. Milk hasn&#39;t gotten any cheaper; in fact, it now averages around $7.50 per gallon.
+<tw-passagedata pid="4" name="garden" tags="" position="668,633">Your constituents are frustrated that they won&#39;t see an Amazon Everystore in Attleboro anytime soon, and even more disappointed that AHS will continue to play on a field built in the 2010s. Johnson and local gardners, however, are thrilled about the new green space coming to the city.
 
-Attleboro is not concerned. Sure groceries are getting expensive, but the markets are looking hopeful as SolarCity stocks continue to skyrocket. Things will even out eventually. Besides, it&#39;s been another dry year. Of course the crops will be struggling. That&#39;s why we went green in the first place.
+(set: $cons = $cons - 1)
+(set: $prep = $prep + 2)
+(set: $fam = $fam)
+
+[[Next-&gt;Church]]</tw-passagedata>
+<tw-passagedata pid="5" name="Church" tags="" position="852,458">It is summer 2051. Milk hasn&#39;t gotten any cheaper; in fact, it now averages around $7.50 per gallon.
+
+Attleboro is not concerned. Sure groceries are getting expensive, but nearly every media outlet claims that the markets are looking hopeful as SolarCity stocks continue to skyrocket. Things will even out eventually. Besides, it&#39;s been another dry year. Of course the crops will be struggling. That&#39;s why we went green in the first place.
 
 Johnson has started holding a weekly farmer&#39;s market right outside city hall on Sunday mornings. You know he&#39;ll be there causing a scene about the global wave of starvation that he claims is en route. Maybe you should go and keep him in check. Regardless of his goals, his passion is admirable and you&#39;d hate to see him get arrested.
 
 However, your wife wants you to keep going to church. She was raised Catholic and your daugther will be applying to St. John&#39;s Kindergarten next year. Also, it&#39;s a great way to build community and get to know your constituents.
 
 Will you go to [[mass-&gt;mass]] or to the [[farmer&#39;s market-&gt;market]]?</tw-passagedata>
-<tw-passagedata pid="6" name="mass" tags="" position="1046,176">constituents--
-family++
-preparedness neutral
+<tw-passagedata pid="6" name="mass" tags="" position="1009,335">Most of the summer passed without any issue, but in late August Johnson destroyed the Rodriguez family&#39;s tomato stall, claiming that they were using dangerous fertilizers to produce such shiny product. The fertilizer in question was classic formula Miracle-Gro, which is practically a placebo.
+
+On the bright side, your daughter&#39;s future kindergarten teacher distributes the communion at each Sundays&#39; mass, and she always returns your daughter&#39;s wave on the way down the aisle.
 
 (set: $cons = $cons - 1)
 (set: $prep = $prep)
 (set: $fam = $fam + 1)
-cons: $cons
-fam: $fam
-prep: $prep
 
 [[Next-&gt;prices]]</tw-passagedata>
-<tw-passagedata pid="7" name="market" tags="" position="1051,387">constituents++
-preparedness++
-family --
+<tw-passagedata pid="7" name="market" tags="" position="1014,545">Your wife is upset with you for skipping mass almost every Sunday, but you know that Johnson would have gotten himself arrested and damaged the reputation of your farmer&#39;s market had you not.
 (set: $cons = $cons + 1)
 (set: $prep = $prep)
 (set: $fam = $fam - 1)
-cons: $cons
-fam: $fam
-prep: $prep
 
 [[Next-&gt;prices]]</tw-passagedata>
-<tw-passagedata pid="8" name="prices" tags="" position="1229,272">It is summer 2055. Milk is no longer available for purchase. It turns out that Johnson was onto something; famine is on the way. However, he was wrong about the cause; genetically modified crops are not the problem, but may in fact be the solution.
+<tw-passagedata pid="8" name="prices" tags="" position="1192,431">It is summer 2052. Milk is prohibitively expensive, ringing up at nearly $12 per gallon. Now your daughter gets her calcium from chewable tablets. It&#39;s also been a dry summer; Attleboro has direct access to its own reservoir, but many states and a few neighboring towns have begun instituting water bans.
 
-The breadbasket of the United States is at the onset of a megadrought. Once California recovered from a decade-long drought in 2022, Americans assumed that they would never witness such an ecological event again. But here we are, preparing to suffer the effects of one many orders of magnitude worse.
+Rumors are swirling about the cause of the uptick. The Chicago Sun Times reports that any Twitter account that posts photos of emaciated cows in Wisconsin is banned immediately; but that blog has been on the verge of bankruptcy for years, so maybe it&#39;s just trying to get attention. Then again, many other outlets and individuals have begun to look into the trend, only to be turned away from leading dairy farms in California, Wisconsin, and New York.
+
+Chapters of an organization called Comfort Our Worries have been springing up all over the country, trying to get people to question their politicians and food providers as to why milk and so many other groceries continue to increase in price. The FDA and PepsiCo conglomorate both insist that this is merely a temporary economic phenomenon, but it&#39;s impossible to be sure. COW continues to grow rapidly via an aggressive social media campaign. Protests have recently become violent in Madison and Albany.
+
+The Bristol County leadership would like to censor the internet access it provides to its citizens. It just so happens that Attleboro is the swing city in the vote for this motion, and your council&#39;s deliberations have reached a deadlock. How would you like to vote?
+
+[[Censor the internet. Allow your citizens to only access information approved by the county and the federal government. Since municipalities maintain all access points, people in your county will not be able to circumvent the firewall.-&gt;censorship]]
+
+[[Do not censor the internet. Allow your citizens to freely access the internet and acquire any information they choose.-&gt;no censorship]]</tw-passagedata>
+<tw-passagedata pid="9" name="censorship" tags="" position="1363,518">Your constituents are outraged by your vote. The freedom of speech and information is extremely important to them. You have no chance of gaining re-election. 
+
+(set: $cons = -10)
+
+[[Next-&gt;deaths]]</tw-passagedata>
+<tw-passagedata pid="10" name="no censorship" tags="" position="1362,351">Your constituents praise you for your support of the first amendment. A COW chapter is established in Attleboro, but it is merely a symbolic gesture since Attleboro doesn&#39;t house any major, national food production farms.
+
+(set: $cons = $cons + 5)
+(set: $prep = $prep + 2)
+
+[[Next-&gt;deaths elected]]</tw-passagedata>
+<tw-passagedata pid="11" name="deaths" tags="" position="1569,599">It is the summer 2053 and milk is priceless. On June 23, the FDA website was updated to display a unique code to all citizens. Citizens of Attleboro show those codes to the National Guard soldiers at the Stop and Shop to receive their weekly rations of multivitamins and dried meals. Attleboro&#39;s reservoir is not depleted, but is drying up. There are rumors that there is next to no available drinking water between New York and Colorado, but you can&#39;t find any details on that online.
+
+Johnson is planning to escape the United States. He believes the rumors and fears that the National Guard will soon become a domineering presence in your life.
+
+You are out of office and out of work entirely. Johnson has always seemed a bit out there, but he has been right about this whole nightmare. Regardless, your wife has faith that things will improve and your daughter is doing well in school, so they are resistant to the move. What do you do?
+
+[[Convince your family to flee with you and Johnson to Canada. Pack your rations and as much water as you can into an UberTesla and go immediately.-&gt;flee]]
+
+[[Stay in Attleboro. Johnson may be onto something, but your family has voted to stay, 2 to 1.-&gt;stay]]
+
+</tw-passagedata>
+<tw-passagedata pid="12" name="deaths elected" tags="" position="1560,249">It is the summer 2053 and milk is priceless. On June 23, the FDA website was updated to display a unique code to all citizens. Citizens of Attleboro show those codes to the National Guard soldiers at the Stop and Shop to receive their weekly rations of multivitamins and dried meals. Attleboro&#39;s reservoir is not depleted, but is drying up.
+
+The Chicago Sun Times and many other anti-establishment news outlets report that there is next to no available drinking water between New York and Colorado. COW has received the answers it sought:
+
+The breadbasket of the United States is at the onset of a megadrought. Once California recovered from a decade-long drought in 2022, Americans assumed that they would never witness such an ecological event again. But here we are, in the midst of the effects of one many orders of magnitude worse.
 
 The effects could have been mitigated had the Environmental Protections Agency not been abolished and NASA defunded by President Trump in 2018. The Anti-Science Era that ensued prevented the development of drought-resistant GMOs and climate research that could have warned America sooner. By the time these agencies were fully reinstated in 2043, it was too late prepare for what was coming.
 
-Yields have been slowly declining for the past decade as soil quality has degraded. Foreign aid is hardly an option considering the isolationist legacy left by recent administrations and the prevelance of natural disasters across the globe in recent years. Ration codes have been digitally distributed to all Americans in an effort to stretch what little food is left.
+Riots are erupting in major cities all over the United States. The government has failed the populus; those not strong enough to flee the midwest have begun to starve to death. Johnson plans to escape to Canada. He thinks that their borders will be closing soon and wants to get across before it&#39;s too late.
 
-Now, here you are in the oasis of New England, with a reservoir </tw-passagedata>
+You are in office and feel obliged to stand by your constituents. Your wife has faith that things will improve and your daughter is doing well in school, so they are resistant to the move. However, Johnson has been right about everything so far. What do you do?
+
+[[Convince your family to flee with you and Johnson to Canada. Pack your rations and as much water as you can into an UberTesla and go immediately.-&gt;flee elected]]
+
+[[Stay in Attleboro. Johnson may be onto something, but you have too many reasons to stay.-&gt;stay elected]]
+
+</tw-passagedata>
+<tw-passagedata pid="13" name="flee" tags="" position="1569,749">You didn&#39;t make it out of Bristol County. Your UberTesla refused to cross the county border and alerted the police when Johnson attempted to initiate a manual override of the self-driving car. Johnson resisted arrest and was taken to jail, but your family cooperated and was let off with a warning.
+
+You weren&#39;t so lucky, however. Your wife took your daughter and moved into her parents&#39; house in Seekonk, Massachusetts. You will not be married for much longer.
+
+[[Next-&gt;2054]]
+
+(set: $fam = -10)</tw-passagedata>
+<tw-passagedata pid="14" name="stay" tags="" position="1719,750">Johnson didn&#39;t make it out of Bristol County. His UberTesla refused to cross the county border and alerted the police when Johnson attempted to initiate a manual override of the self-driving car. Johnson resisted arrest and will soon be sentenced to prison.
+
+You are relieved that you still have your family in these desperate times.
+
+[[Next-&gt;2054]]
+
+(set: $fam = $fam+5)</tw-passagedata>
+<tw-passagedata pid="15" name="2054" tags="" position="1569,899">It is summer 2058 and your world has come to an end. Rations are no longer provided by what is left of the government. Tens of millions have died due to starvation and skirmishes with the National Guard. 
+
+New England has remained relatively peaceful, though starvation remains a constant threat. Attleboro&#39;s population has dwindled as those who were unable to produce or otherwise acquire their own food have marched either north to Maine or south towards Florida where it still rains regularly. The UberTesla automated vehicle network is offline and the highways are too congested with malfunctioning vehicles to facilitate rapid transit.
+
+No foreign aid is coming. the isolationist tendencies of the last four decades of presidential administrations have destroyed your alliances. Besides, weather crises have been prevalent across the globe for the past ten years, leaving no nation in a position to assist the United States.
+
+(if: $fam &gt;= 0 and $prep &gt;= 0 and $cons &gt; 0)[Thankfully, you have maintained a strong reputation among your constituents and have made many friends in the area. It turns out that your daughter&#39;s kindergarten teacher is a part of an organic farm collective and began to stockpile food as soon as things started looking bad. She put in a good word for you and the collective has taken you and your family in as laborers. With good heath, the respect of your community, and your family intact, you will find the light in this new dark, dry world.]
+(elseif: $prep &gt;= 0 and $cons &gt; 0)[Thankfully, you have maintained a strong reputation among your constituents and have made many friends in the area. As an able-bodied and respected individual, you are able to sustain yourself through the good graces of your connections in the community.]
+(elseif: $fam &gt; 0 and $prep &gt; 0)[You have your family and a particularly strong understanding of what has gone wrong. You venture north, as you know that is where your best chance of survival lies.]
+(elseif: $fam &gt; 0)[You have failed to demonstrate competence in the face of insurmountable odds and failed maintain the trust of your constituents. You still have your family, but it is unlikely that you will last long.]
+(elseif: $prep &gt; 0)[You have failed your family and your constituents. At least you have developed a firm understanding of what you are up against. You flee south towards Florida, desperate for survival and solitude.]
+(else:)[You are doomed.]
+</tw-passagedata>
+<tw-passagedata pid="16" name="flee elected" tags="" position="1559,414">You didn&#39;t make it out of Bristol County. Your UberTesla refused to cross the county border and alerted the police when Johnson attempted to initiate a manual override of the self-driving car. Johnson resisted arrest and was taken to jail, but your family cooperated and was let off with a warning.
+
+You weren&#39;t so lucky, however. Your constituents demanded that you be impeached for attempting to flee. A unanimous vote removes you from office. Your wife took your daughter and moved into her parents&#39; house in Seekonk, Massachusetts. You will not be married for much longer.
+
+[[Next-&gt;2054]]
+
+(set: $cons = -10)
+(set: $fam = -10)</tw-passagedata>
+<tw-passagedata pid="17" name="stay elected" tags="" position="1710,399">Johnson didn&#39;t make it out of Bristol County. His UberTesla refused to cross the county border and alerted the police when Johnson attempted to initiate a manual override of the self-driving car. Johnson resisted arrest and will soon be sentenced to prison.
+
+You are relieved that you still have your family in these desperate times.
+
+[[Next-&gt;2054]]
+
+(set: $fam = $fam+5)</tw-passagedata>
 </tw-storydata>
 
 
